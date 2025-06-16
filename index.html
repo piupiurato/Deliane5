@@ -1,59 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Carta Para o Meu Amor</title>
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      background: linear-gradient(to right, #ffdee9, #b5fffc);
-      font-family: 'Dancing Script', cursive;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      overflow: hidden;
-    }
-    .carta-container {
-      background: white;
-      padding: 40px;
-      border-radius: 15px;
-      box-shadow: 0 0 30px rgba(0,0,0,0.2);
-      max-width: 600px;
-      text-align: center;
-      position: relative;
-    }
-    .paragrafo {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
-      margin: 20px 0;
-      font-size: 1.5rem;
-    }
-    .paragrafo.mostrar {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    button {
-      margin-top: 20px;
-      padding: 10px 25px;
-      font-size: 1.2rem;
-      border: none;
-      border-radius: 8px;
-      background-color: #ff6f91;
-      color: white;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-    button:hover {
-      background-color: #ff3c6f;
-    }
-    audio {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="carta-container">
@@ -66,23 +18,11 @@
       <p class="paragrafo">Quero seguir ao seu lado, de mãos dadas, para sempre.</p>
     </div>
     <button onclick="mostrarParagrafo()">Ler a próxima parte 💖</button>
-    <audio id="musica" autoplay loop>
+    <audio id="musica" loop>
       <source src="musica-romantica.mp3" type="audio/mpeg">
     </audio>
   </div>
 
-  <script>
-    const paragrafos = document.querySelectorAll('.paragrafo');
-    let indice = 0;
-
-    function mostrarParagrafo() {
-      if (indice < paragrafos.length) {
-        paragrafos[indice].classList.add('mostrar');
-        indice++;
-      } else {
-        alert('Fim da carta. Eu te amo! ❤️');
-      }
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
