@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  background: linear-gradient(to right, #ffdee9, #b5fffc);
+  font-family: 'Dancing Script', cursive;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carta-container {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.2);
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.paragrafo {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.paragrafo.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff6f91;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3c6f;
+}
+
+audio {
+  display: none;
+}
